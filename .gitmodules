@@ -2,3 +2,6 @@
 	path = api/elioapi
 	url = https://github.com/encarbassot/node_console_utils
 	branch = ElioApi
+[submodule "frontend/src/elio-react-components"]
+	path = frontend/src/elio-react-components
+	url = https://github.com/encarbassot/elio-react-components.git
