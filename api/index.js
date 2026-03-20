@@ -1,4 +1,4 @@
-import { ElioApi, ElioModel, ElioField, ElioError, elioPaginatedResponse } from 'elioapi'
+import { ElioApi, ElioModel, ElioField, ElioError, elioPaginatedResponse } from './elioapi/index.js'
 import { createModels } from '../models/index.js'
 import { ROLES, SCHEDULE_MODES, SHIFT_STATUS, INVITATION_STATUS, CONFIG_DEFAULTS, TEMPLATE_END_TYPES, FRONTEND_URL } from '../constants/index.js'
 
