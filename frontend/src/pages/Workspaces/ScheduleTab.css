@@ -1,0 +1,321 @@
+/* Schedule Tab */
+.ScheduleTab {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  padding: 0 12px;
+  background-color: white;
+}
+
+/* Controls bar */
+.sched-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.sched-month-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sched-nav-btn {
+  background: none;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.sched-nav-btn:hover {
+  background: var(--color-bg-hover, #f0f0f0);
+}
+
+.sched-month-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 160px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.sched-user-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border, #ddd);
+  font-size: 0.9rem;
+  background: var(--color-bg, #fff);
+}
+
+/* Header row with hour labels */
+.sched-header-row {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 4px 0;
+  border-bottom: 1px solid var(--color-border, #eee);
+}
+
+.sched-col-day {
+  width: 70px;
+  min-width: 70px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.sched-col-hours {
+  width: 50px;
+  min-width: 50px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.sched-col-timeline {
+  flex: 1;
+  position: relative;
+  min-height: 20px;
+}
+
+.sched-hour-labels {
+  position: relative;
+  height: 16px;
+}
+
+.sched-hour-label {
+  position: absolute;
+  font-size: 0.65rem;
+  color: var(--color-text-muted, #999);
+  transform: translateX(-50%);
+}
+
+/* Day rows */
+.sched-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.sched-day-group {
+  border-bottom: 1px solid var(--color-border, #f0f0f0);
+}
+
+.sched-row {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.sched-row:hover {
+  background: var(--color-bg-hover, #fafafa);
+}
+
+.sched-row--weekend {
+  background: var(--color-bg-muted, #f8f8fa);
+}
+
+.sched-row--weekend:hover {
+  background: var(--color-bg-hover, #f0f0f2);
+}
+
+.sched-row--today {
+  background: #eef6ff;
+}
+
+.sched-row--today:hover {
+  background: #e0efff;
+}
+
+.sched-row--expanded {
+  background: var(--color-bg-hover, #f5f5f5);
+}
+
+.sched-day-name {
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #888);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sched-day-num {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.sched-total {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text, #333);
+}
+
+.sched-total--empty {
+  color: var(--color-text-muted, #ccc);
+}
+
+/* Timeline */
+.sched-timeline-bg {
+  position: relative;
+  height: 18px;
+  background: var(--color-bg-muted, #f3f3f3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sched-bar {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 3px;
+  min-width: 3px;
+  transition: opacity 0.15s;
+}
+
+.sched-bar:hover {
+  opacity: 0.8;
+}
+
+/* Shift colors */
+.shift--planned .sched-bar,
+.sched-bar.shift--planned {
+  background: #5b9bd5;
+}
+
+.shift--ontime .sched-bar,
+.sched-bar.shift--ontime {
+  background: #4caf50;
+}
+
+.shift--active .sched-bar,
+.sched-bar.shift--active {
+  background: linear-gradient(90deg, #43a047 0%, #66bb6a 60%, #a5d6a7 100%);
+  animation: active-shimmer 2s linear infinite;
+  background-size: 200% 100%;
+}
+
+.shift--deviation .sched-bar,
+.sched-bar.shift--deviation {
+  background: #ff9800;
+}
+
+.shift--suspicious .sched-bar,
+.sched-bar.shift--suspicious {
+  background: #e53935;
+}
+
+.shift--cancelled .sched-bar,
+.sched-bar.shift--cancelled {
+  background: #bdbdbd;
+}
+
+@keyframes active-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes pulse-active {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Loading */
+.sched-loading {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Detail rows */
+.sched-detail {
+  padding: 8px 0 8px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: slide-down 0.15s ease-out;
+}
+
+.sched-detail--empty {
+  color: var(--color-text-muted, #999);
+  font-size: 0.85rem;
+  font-style: italic;
+  padding-left: 80px;
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sched-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-bg, #fff);
+  border-radius: 8px;
+  padding: 10px 14px;
+  border-left: 4px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.sched-detail-row.shift--planned { border-left-color: #5b9bd5; }
+.sched-detail-row.shift--ontime { border-left-color: #4caf50; }
+.sched-detail-row.shift--active { border-left-color: #43a047; }
+.sched-detail-row.shift--deviation { border-left-color: #ff9800; }
+.sched-detail-row.shift--suspicious { border-left-color: #e53935; }
+.sched-detail-row.shift--cancelled { border-left-color: #bdbdbd; }
+
+.sched-detail-times {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sched-detail-pair {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.sched-detail-label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #888);
+  min-width: 55px;
+}
+
+.sched-detail-note {
+  font-style: italic;
+  color: var(--color-text-muted, #777);
+}
+
+.sched-detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sched-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #eee;
+}
+
+.sched-status--planned { background: #e3f2fd; color: #1565c0; }
+.sched-status--in_progress { background: #e8f5e9; color: #2e7d32; }
+.sched-status--completed { background: #f1f8e9; color: #558b2f; }
+.sched-status--cancelled { background: #fafafa; color: #999; }

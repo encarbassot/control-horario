@@ -1,0 +1,3 @@
+[submodule "src/elio-react-components"]
+	path = src/elio-react-components
+	url = https://github.com/encarbassot/elio-react-components.git

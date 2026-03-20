@@ -1,0 +1,171 @@
+.VersionCheckHelp {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  /* background-color: #f4f4f4; */
+  color: #333;
+
+
+}
+
+.VersionCheckHelp,
+.VersionCheckHelp * {
+  text-align: left !important;
+
+}
+
+.VersionCheckHelp .container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.VersionCheckHelp h1 {
+  color: #0056b3;
+  text-align: center;
+  font-size: 25px;
+}
+
+.VersionCheckHelp h2 {
+  color: #ec3397;
+  font-size: 20px;
+
+}
+
+.VersionCheckHelp ul {
+  padding-left: 20px;
+}
+
+.VersionCheckHelp .note {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* HelpCache home button */
+.HelpCache__home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  padding: 6px 14px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #555;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  transition: all 0.15s ease;
+}
+
+.HelpCache__home:hover {
+  border-color: #0056b3;
+  color: #0056b3;
+}
+
+.HelpCache__home img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+/* HelpCache tabs */
+.HelpCache__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.HelpCache__tab {
+  padding: 6px 12px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  color: #555;
+  transition: all 0.15s ease;
+}
+
+.HelpCache__tab:hover {
+  border-color: #ec3397;
+  color: #ec3397;
+}
+
+.HelpCache__tab--active {
+  background: #ec3397;
+  border-color: #ec3397;
+  color: white;
+  font-weight: bold;
+}
+
+.HelpCache__content {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  min-height: 200px;
+}
+
+.HelpCache__content ol {
+  padding-left: 20px;
+}
+
+.HelpCache__content li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.HelpCache__content code {
+  background: #eee;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 13px;
+}
+
+/* Changelog entries inside update modals */
+.VersionCheck__changelog {
+  margin-top: 12px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #f9f9f9;
+  font-size: 13px;
+}
+
+.VersionCheck__changelog-entry {
+  margin-bottom: 10px;
+}
+
+.VersionCheck__changelog-entry:last-child {
+  margin-bottom: 0;
+}
+
+.VersionCheck__changelog-entry strong {
+  font-size: 13px;
+  color: #ec3397;
+}
+
+.VersionCheck__changelog-date {
+  color: #888;
+  font-size: 12px;
+}
+
+.VersionCheck__changelog ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+
+.VersionCheck__changelog li {
+  margin-bottom: 12px;
+  line-height: 1.4;
+  color: #444;
+  list-style-type: disc;
+}

@@ -1,0 +1,66 @@
+.ActiveClockBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 0.85rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 12px;
+}
+
+.ActiveClockBar__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ActiveClockBar__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4caf50;
+  animation: clock-pulse 1.5s infinite;
+}
+
+@keyframes clock-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.ActiveClockBar__ws {
+  font-weight: 600;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ActiveClockBar__timer {
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.ActiveClockBar__stop {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #e53935;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.ActiveClockBar__stop:hover {
+  background: #c62828;
+}

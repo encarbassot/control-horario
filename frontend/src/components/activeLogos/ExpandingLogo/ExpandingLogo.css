@@ -1,0 +1,28 @@
+.ExpandingLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  transition: gap 0.5s ease-in-out;
+  overflow: hidden;
+}
+.ExpandingLogo .expander {
+  width: 235px;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.Sidepanel:not(.extended) .ExpandingLogo {
+  gap: 50px;
+}
+
+.Sidepanel.extended .expander{
+  width:0px;
+}
+
+
+.ExpandingLogo img {
+
+  height: 30px;
+}

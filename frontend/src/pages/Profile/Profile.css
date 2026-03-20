@@ -1,0 +1,60 @@
+.Profile {}
+
+
+.Profile .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Profile .container>.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Profile .container>.row:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 1rem;
+}
+
+.Profile .container>.row>.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
+.Profile .EditButton {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.Profile .EditButton:hover {
+  background-color: #e0e0e0;
+}
+
+.Profile .EditButton img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.ModalEditField {
+  width: 500px;
+}
+
+
+.Profile footer{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

@@ -1,0 +1,170 @@
+.InvitationLanding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--bg-2, #f4f4f5);
+}
+
+.inv-card {
+  background: var(--bg-1, #fff);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+
+.inv-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.inv-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.inv-workspace {
+  font-size: 1rem;
+  color: var(--text-2, #555);
+  margin: 0;
+}
+
+.inv-email {
+  font-size: 0.85rem;
+  color: var(--text-3, #888);
+  margin: 0;
+}
+
+/* ── Role badge ─────────────────────────────────────────────── */
+
+.role-badge {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.role-badge--owner  { background: #fef3c7; color: #92400e; }
+.role-badge--admin  { background: #dbeafe; color: #1e40af; }
+.role-badge--member { background: #f3f4f6; color: #374151; }
+
+/* ── Status icons ───────────────────────────────────────────── */
+
+.inv-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.inv-icon--success { background: #d1fae5; color: #065f46; }
+.inv-icon--error   { background: #fee2e2; color: #991b1b; }
+
+.inv-card h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.inv-subtitle {
+  text-align: center;
+  color: var(--text-2, #555);
+  margin: 0;
+}
+
+/* ── Tabs ───────────────────────────────────────────────────── */
+
+.inv-tabs {
+  display: flex;
+  border-radius: 8px;
+  background: var(--bg-2, #f4f4f5);
+  padding: 3px;
+  gap: 3px;
+}
+
+.inv-tab {
+  flex: 1;
+  padding: 0.45rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-2, #555);
+  transition: background 0.15s, color 0.15s;
+}
+
+.inv-tab--active {
+  background: var(--bg-1, #fff);
+  color: var(--text-1, #111);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Tab content ────────────────────────────────────────────── */
+
+.inv-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inv-signup-info p {
+  color: var(--text-2, #555);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.inv-hint {
+  font-size: 0.8rem;
+  color: var(--text-3, #888);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Misc ───────────────────────────────────────────────────── */
+
+.inv-error {
+  color: var(--color-error, #dc2626);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.inv-links {
+  display: flex;
+  justify-content: center;
+}
+
+.inv-links a {
+  font-size: 0.85rem;
+  color: var(--accent, #2563eb);
+  text-decoration: none;
+}
+
+.inv-links a:hover {
+  text-decoration: underline;
+}
+
+.inv-authenticated {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

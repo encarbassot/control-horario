@@ -1,0 +1,75 @@
+.Signup {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+
+  justify-content: flex-start;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+
+.Signup .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+
+  max-width: 500px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+
+  margin: 5rem 90px;
+  flex: 0 0 auto;
+}
+
+
+
+
+
+
+.Signup p.link {
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.Signup p.link a {
+  color: black;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+  .Signup {
+    padding: 1rem;
+  }
+
+  .Signup .form {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-height: 850px) {
+  .Signup {
+  
+  }
+
+  .Signup .form {
+  }
+}

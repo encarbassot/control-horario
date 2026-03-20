@@ -1,0 +1,94 @@
+.filterBtn{
+  --filterbtn-size: 25px;
+  --filterbtn-barh: 3px;
+  --filterbtn-vpad: 3px;
+  --filterbtn-bargap: 5px;
+  --filterbtn-bardec: 7px;
+}
+
+
+@media (max-width: 768px) {
+  .filterBtn {
+    --filterbtn-size: 17px;
+    --filterbtn-barh: 2px;
+    --filterbtn-vpad: 2.5px;
+    --filterbtn-bargap: 3px;
+    --filterbtn-bardec: 5px;
+  }
+}
+
+.filterBtn{
+  position: relative;
+  width: var(--filterbtn-size);
+  aspect-ratio: 1/1;
+}
+
+
+
+.filterBtn span{
+  position: absolute;
+  height: var(--filterbtn-barh);
+  border-radius: calc(var(--filterbtn-barh) / 2);
+  background-color: white;
+
+  transition:
+    transform 420ms ease,
+    top 420ms ease,
+    bottom 420ms ease,
+    width 420ms ease,
+    opacity 160ms ease;
+  will-change: transform, top, bottom, width, opacity;
+}
+
+.button:hover .filterBtn span{
+  background-color: #000;
+}
+
+.filterBtn span.a{
+  transform: translate(-50%, -50%);
+  top: var(--filterbtn-vpad);
+  left: 50%;
+  width: var(--filterbtn-size);
+}
+
+
+.filterBtn span.b{
+  transform: translate(-50%, -50%);
+  top: calc(var(--filterbtn-vpad) + var(--filterbtn-barh) + var(--filterbtn-bargap));
+  width: calc(var(--filterbtn-size) - var(--filterbtn-bardec));
+  left: 50%;
+}
+
+.filterBtn span.c{
+  transform: translate(-50%, -50%);
+  bottom: var(--filterbtn-vpad);
+  left: 50%;
+  width: calc(var(--filterbtn-size) - var(--filterbtn-bardec) * 2);
+}
+
+
+.filterBtn.filterBtn--open span.a{
+  top: 50%;
+  width: calc(var(--filterbtn-size) *0.88);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.filterBtn.filterBtn--open span.b{
+  top: 50%;
+  width: calc(var(--filterbtn-size) *0.88);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* la c cae hacia abajo y se desvanece */
+.filterBtn.filterBtn--open span.c{
+  bottom: 0px;
+  transform: translate(-50%, 140%);
+  opacity: 0;
+  transition:
+    transform 420ms ease,
+    bottom 420ms ease,
+    opacity 120ms ease;
+}
+
+
+

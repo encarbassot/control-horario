@@ -1,0 +1,123 @@
+.route-error {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.route-error__content {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.route-error__icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.route-error__content h1 {
+  color: #333;
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.route-error__message {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.route-error__component-info {
+  /* margin: 20px 0;
+  padding: 16px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.route-error__component-info h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #856404;
+  font-weight: 600;
+}
+
+.route-error__component-name {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #fff;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 16px;
+  color: #d63031;
+  font-weight: 600;
+  border: 2px solid #ffc107;
+}
+
+.route-error__debug {
+  text-align: left;
+  margin: 20px 0;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.route-error__debug summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  user-select: none;
+}
+
+.route-error__debug-content {
+  margin-top: 12px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 12px;
+  color: #e53e3e;
+}
+
+.route-error__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.route-error__btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #667eea;
+  color: white;
+}
+
+.route-error__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.route-error__btn--secondary {
+  background: #e2e8f0;
+  color: #333;
+}
+
+.route-error__btn--secondary:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

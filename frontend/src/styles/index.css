@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+
+html,
+body,
+.app,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+hr {
+  border-bottom: 1px solid #3333 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  width: 100%;
+  max-width: min(90vw, 500px);
+  margin: 0 auto;
+
+}
+
+.button:hover {
+  border-color: #646cff;
+}
+
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+
+
+input:focus {
+  outline: none
+}
+
+
+/* input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="color"] {
+  background: none;
+  border: 0;
+  border-bottom: 1.5px solid #333;
+  padding: 8px;
+  font-size: 16px;
+  color: black;
+  background-color: #eee;
+
+  width: 100%;
+} */
+
+/* input.error {
+  background-color: #f8d7da;
+  border-color: #721c24;
+  color: #721c24;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0056b3;
+  background-color: #eef;
+} */
+
+
+label:has(input) {
+  width: 100%;
+  max-width: min(90vw, 500px);
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #333;
+  background-color: #f0f0f0;
+  /* Add a background color for the label */
+  padding: 8px;
+  border-radius: 4px;
+}
+
+
+@container (min-width: 300px) {
+  label:has(input) {
+    display: inline;
+  }
+}
+
+
+
+.Page,
+.Page>main {
+  max-width: var(--max-width);
+  width: 100%;
+  /* height: 100%; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 10px;
+  overflow-y: auto;
+
+}
+
+.Page:has(>main) {
+  /* padding: 0; */
+}
+
+.Page main {
+  padding: 0;
+  overflow-y: unset;
+  margin-bottom: 5rem;
+}
+
+
+
+.Page>section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+
+.Page>footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+
+
+.filter-box {
+  /* display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: dense; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 10px;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  /* @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  } */
+}
+
+
+.filter-box>* {
+  flex: 1 1 300px;
+  /* Grow, shrink, min-width of 300px */
+  max-width: calc(50% - 10px);
+  /* Limits to 2 columns while accounting for gap */
+}
+
+.filter-box>* {
+  max-width: 100%;
+  /* Switch to single-column layout on small screens */
+}

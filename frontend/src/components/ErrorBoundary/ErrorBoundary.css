@@ -1,0 +1,128 @@
+.error-boundary {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.error-boundary__content {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.error-boundary__icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.error-boundary__content h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.error-boundary__message {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.error-boundary__details {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.error-boundary__details h3 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.error-boundary__component {
+  display: block;
+  background: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #d63031;
+  font-weight: bold;
+}
+
+.error-boundary__debug {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.error-boundary__debug summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.error-boundary__debug-content {
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.error-boundary__debug-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.error-boundary__debug-content li {
+  padding: 4px 0;
+  font-family: 'Courier New', monospace;
+  color: #666;
+}
+
+.error-boundary__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.error-boundary__btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #667eea;
+  color: white;
+}
+
+.error-boundary__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.error-boundary__btn--secondary {
+  background: #6c757d;
+}
+
+.error-boundary__btn--secondary:hover {
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4);
+}

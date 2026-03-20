@@ -1,0 +1,3 @@
+.relative-time{ color: var(--muted,#444); font-size: 13px; }
+.relative-time small{ color: var(--muted,#666); font-size: 12px; margin-left:6px; }
+.relative-time:hover{ text-decoration: none; color: var(--text-color,#111); }

@@ -1,0 +1,43 @@
+.Validate {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.Validate .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Validate .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+
+  max-width: 500px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+
+
+@media (max-width:500px){
+  .Validate{
+    justify-content: flex-start;
+    margin-top: 5vh;
+    gap: 2rem;
+  }
+
+  .Validate .form{
+    border: none;
+  }
+}

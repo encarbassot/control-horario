@@ -1,0 +1,17 @@
+.Users__page {
+  height: 100%;
+  width: 100%;
+}
+
+
+.Users__page .content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.Users__page .actions {
+  display: flex;
+  gap: 1rem;
+}

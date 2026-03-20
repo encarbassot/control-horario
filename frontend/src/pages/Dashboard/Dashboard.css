@@ -1,0 +1,249 @@
+.Dashboard {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  overflow-y: auto;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.Dashboard h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* ── Sections ─────────────────────────────────────────────── */
+
+.dash-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dash-section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-section__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-2, #555);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dash-loading {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.dash-empty {
+  color: var(--text-3, #888);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.dash-link {
+  color: var(--accent, #2563eb);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ── Invitation cards ─────────────────────────────────────── */
+
+.dash-inv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dash-inv-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  background: var(--bg-1, #fff);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-left: 4px solid var(--accent, #2563eb);
+}
+
+.dash-inv-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.dash-inv-ico {
+  width: 28px;
+  height: 28px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.dash-inv-ws {
+  font-weight: 600;
+  margin: 0 0 0.15rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dash-inv-role {
+  font-size: 0.8rem;
+  color: var(--text-3, #888);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dash-inv-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* ── Workspace list with clock ─────────────────────────────── */
+
+.dash-ws-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dash-ws-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  background: var(--bg-1, #fff);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: border-color 0.2s, background 0.2s;
+  border-left: 4px solid transparent;
+}
+
+.dash-ws-row--active {
+  border-left-color: #22c55e;
+  background: #f0fdf4;
+}
+
+.dash-ws-row__info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.dash-ws-row__name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dash-ws-row__clock {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.dash-ws-row__timer {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #16a34a;
+  min-width: 70px;
+  text-align: right;
+}
+
+/* ── Clock button ─────────────────────────────────────────── */
+
+.clock-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.15s;
+  flex-shrink: 0;
+}
+
+.clock-btn:active {
+  transform: scale(0.92);
+}
+
+.clock-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.clock-btn--play {
+  background: #22c55e;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(34,197,94,0.35);
+}
+
+.clock-btn--play:hover:not(:disabled) {
+  box-shadow: 0 4px 14px rgba(34,197,94,0.45);
+}
+
+.clock-btn--stop {
+  background: #ef4444;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(239,68,68,0.35);
+}
+
+.clock-btn--stop:hover:not(:disabled) {
+  box-shadow: 0 4px 14px rgba(239,68,68,0.45);
+}
+
+/* ── Role badge (shared with WorkspaceDetail) ─────────────── */
+
+.role-badge {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.role-badge--owner  { background: #fef3c7; color: #92400e; }
+.role-badge--admin  { background: #dbeafe; color: #1e40af; }
+.role-badge--member { background: #f3f4f6; color: #374151; }
+
+/* ── Button variants ──────────────────────────────────────── */
+
+.button--small {
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.button--danger-outline {
+  background: transparent;
+  border: 1px solid var(--color-error, #dc2626);
+  color: var(--color-error, #dc2626);
+}
+
+.button--danger-outline:hover {
+  background: #fee2e2;
+}

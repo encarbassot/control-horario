@@ -1,0 +1,62 @@
+.user-card-wrapper{ 
+  position: relative; 
+  display: inline-block; 
+}
+.user-card-label{
+   cursor: default;
+   color: var(--text-color,#111);
+   padding: 3px 6px;
+  border-radius: 4px;
+ }
+
+ .user-card-label.show-label{
+     background-color: #DDD;
+
+ }
+.user-card-label[role="button"]{
+   cursor: pointer;
+   text-decoration: underline;
+ }
+
+.user-card-floating{
+  display: none;
+   position: absolute;
+   left: 0;
+   top: 100%;
+   z-index: 400;
+   background: #fff;
+   border: 1px solid rgba(0,0,0,0.12);
+   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+   padding: 10px;
+   border-radius: 6px;
+   min-width: 220px;
+   font-size: 13px;
+   color: #222;
+ }
+
+
+ .user-card-wrapper:hover .user-card-floating{
+   display: block;
+ }
+
+.user-card-floating .uc-row{
+   margin-bottom: 6px;
+   display:flex;
+   gap:8px;
+ }
+.user-card-floating .uc-row strong{
+   width: 70px;
+   color:#444;
+ }
+.user-card-floating .uc-pre{
+   margin:0;
+   font-family: monospace;
+   font-size:12px;
+   max-height:120px;
+   overflow:auto;
+ }
+.user-card-floating .uc-action{
+   margin-top:8px;
+   font-size:12px;
+   color: var(--accent,#0b66ff);
+ }
